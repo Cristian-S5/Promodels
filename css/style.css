@@ -1111,3 +1111,34 @@ ul {
         text-align: center;
     }
 }
+
+/* Developer Credit */
+.developer-credit {
+    text-align: center;
+    padding: 20px 0;
+    background: #020202;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}
+
+.developer-credit a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    vertical-align: middle;
+    transition: var(--transition-normal);
+}
+
+.developer-logo {
+    height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1) opacity(0.6); /* Default look matching muted text */
+    transition: var(--transition-normal);
+}
+
+.developer-credit a:hover .developer-logo {
+    filter: brightness(0) invert(1) opacity(1);
+    transform: scale(1.05);
+}
