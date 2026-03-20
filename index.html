@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promodels | Activación en Retail y Producción Profesional</title>
+    <meta name="description" content="Promodels ofrece servicios de terciarización de promotores, eventos, producciones de moda, cursos de modelo y media management en Uruguay.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Background Canvas for Atmospheric Effects -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="logo">
+                <span class="logo-pro">PRO</span><span class="logo-models">MODELS</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
+                <li><a href="#contacto" class="nav-link button-outline">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button class="close-menu-btn" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Quiénes Somos</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section-padding">
+            <div class="container hero-container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="subtitle-tag">Experiencia y Visión</div>
+                    <h1 class="hero-title">Activación estratégica en retail y eventos corporativos</h1>
+                    <p class="hero-description">
+                        Especialistas en la terciarización de promotores para promociones y presencia destacada en eventos, congresos y exposiciones a nivel nacional. Aportamos valor y presencia a su marca.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contacto" class="btn btn-primary">
+                            <span>Solicitar Cotización</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#servicios" class="btn btn-secondary">Explorar Servicios</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Global Abstract Shapes for Background Glow -->
+            <div class="background-glow-container">
+                <div class="abstract-shape shape-1"></div>
+                <div class="abstract-shape shape-2"></div>
+                <div class="abstract-shape shape-3"></div>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="servicios" class="services section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros Servicios</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="service-title">Terciarización de Promotores</h3>
+                        <p class="service-desc">Degustaciones, perfumaciones, sampling, entrega de volantes, acciones en vía pública, playas y ramblas en Montevideo, Punta del Este y el interior del país.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <h3 class="service-title">Eventos</h3>
+                        <p class="service-desc">Presencia en congresos, exposiciones, ferias, Expo Prado, eventos sociales, empresariales y deportivos. Performances, body art y artistas en todo el país.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-camera"></i></div>
+                        <h3 class="service-title">Producciones de Moda</h3>
+                        <p class="service-desc">Producciones para empresas y eventos, desarrollo de catálogos, fotografía profesional de alto nivel, y book de modelos y productos.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="service-title">Curso de Modelo Profesional</h3>
+                        <p class="service-desc">6 meses de duración. Pasarela, Imagen, Protocolo, Nutrición, Maquillaje. Prácticas en producciones de moda, desfiles, eventos y promociones.</p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card md-span-2">
+                        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3 class="service-title">Media & Community Management</h3>
+                        <p class="service-desc">Diseño web, gestión de redes, mailing. Productora audiovisual para spots publicitarios y gestión de medios tradicionales (TV, prensa, vía pública).</p>
+                    </div>
+                </div>
+
+                <!-- Uniforms Highlight -->
+                <div class="uniforms-highlight">
+                    <div class="highlight-content">
+                        <div class="highlight-icon"><i class="fas fa-tshirt"></i></div>
+                        <p><strong>Nuestra empresa cuenta con uniformes confeccionados para promociones o eventos.</strong><br>En caso de solicitar algún diseño diferente se puede confeccionar a medida.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quienes Somos Section -->
+        <section id="nosotros" class="about section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-title">Quiénes Somos</h2>
+                        <div class="title-line"></div>
+                        <div class="about-content-box">
+                            <p class="lead-text">Promodels tiene la experiencia, la visión estratégica y el pensamiento creativo para ofrecer soluciones reales de activación en retail.</p>
+                            <p>Nuestros conocimientos del retail y del consumidor hacen una mezcla de gran alcance. En Activación de Ventas hacemos de esta nuestra misión, añadiendo creatividad.</p>
+                            <p>Conceptualizamos y ejecutamos experiencias para tu marca, producto o servicio, que impulsan ventas e imagen de marca.</p>
+                            
+                            <div class="signature">
+                                <span class="sig-name">Prof. Téc. Adm. Luis Prais</span>
+                                <span class="sig-title">Director General</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Abstract representation of the brand since no images are allowed -->
+                    <div class="about-visual">
+                        <div class="glass-orb"></div>
+                        <div class="glass-card-accent">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-text">Años de Excelencia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Trayectoria Section -->
+        <section id="trayectoria" class="trajectory section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestra Trayectoria</h2>
+                    <p class="section-subtitle">Años de compromiso, innovación y resultados comprobables en el mercado uruguayo.</p>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Milestone 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Liderazgo en Activación</h3>
+                            <p>Más de una década consolidándonos como referentes en la ejecución de promociones de alto impacto en los principales puntos estratégicos del país.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Expansión Nacional</h3>
+                            <p>Logramos una cobertura total en Montevideo, Punta del Este y el Interior, permitiendo que las marcas lleguen a su público objetivo en cualquier rincón de Uruguay.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-item highlight">
+                        <div class="timeline-point gold"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Formación Profesional</h3>
+                            <p>Creamos el Curso de Modelo Profesional, elevando el estándar de calidad y profesionalismo del personal en eventos y promociones corporativas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Transformación Digital</h3>
+                            <p>Incorpación de servicios integrales de Media & Community Management, adaptando la visión estratégica al ecosistema digital actual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Statistics -->
+                <div class="achievement-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Eventos Ejecutados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1k+</div>
+                        <div class="stat-label">Promotores Formados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Marcas Aliadas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clientes Section (Requested before footer) -->
+        <section class="clients section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">Clientes</h2>
+                    <p class="section-subtitle">Marcas que confían en nuestra trayectoria profesional</p>
+                    <div class="title-line center-line"></div>
+                </div>
+                
+                <!-- Typographic client representation (No images allowed) -->
+                <div class="clients-typographic-grid">
+                    <div class="client-name">Retail & Corp</div>
+                    <div class="client-name">Moda Uy</div>
+                    <div class="client-name">Tech Events</div>
+                    <div class="client-name">Premium Brands</div>
+                    <div class="client-name">Expo Nacional</div>
+                    <div class="client-name">Global Services</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="contact section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacto</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3 class="contact-subtitle">Hablemos de tu próximo proyecto</h3>
+                        <p class="contact-desc">Estamos listos para aportar valor a su marca a través de nuestros servicios especializados. Contáctenos para solicitar una cotización.</p>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                                <div class="info-text">
+                                    <span>Teléfono</span>
+                                    <a href="tel:+59894499748">+598 94 499 748</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="info-text">
+                                    <span>Correo</span>
+                                    <a href="mailto:promodels@promodelsuruguay.com">promodels@promodelsuruguay.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="info-text">
+                                    <span>Dirección</span>
+                                    <address>Avenida Uruguay 1589, Montevideo</address>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/agencia_promodels_uy" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/luisprais/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" required placeholder=" ">
+                                <label for="name">Nombre completo</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" required placeholder=" ">
+                                <label for="email">Correo electrónico</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder=" ">
+                                <label for="phone">Teléfono (opcional)</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <select id="service" required>
+                                    <option value="" disabled selected>Seleccione un servicio de interés</option>
+                                    <option value="promotores">Terciarización de Promotores</option>
+                                    <option value="eventos">Eventos</option>
+                                    <option value="moda">Producciones de Moda</option>
+                                    <option value="curso">Curso de Modelo Profesional</option>
+                                    <option value="media">Media & Community Management</option>
+                                    <option value="otro">Otro / Consulta General</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" rows="4" required placeholder=" "></textarea>
+                                <label for="message">Mensaje o detalle de cotización</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>Enviar Mensaje</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.227448247065!2d-56.179375!3d-34.9007412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81d13264b9dd%3A0xe54d6af24fe46816!2sAv.%20Uruguay%201589%2C%2011200%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1sen!2sus!4v1710920000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-pro">PRO</span><span class="logo-models">MODELS</span>
+                    </a>
+                    <p class="footer-desc">Soluciones reales de activación en retail, eventos y producciones de moda.</p>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Quiénes Somos</a></li>
+                        <li><a href="#trayectoria">Trayectoria</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone-alt"></i> +598 94 499 748</p>
+                    <p><i class="fas fa-envelope"></i> promodels@promodelsuruguay.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Promodels. Todos los derechos reservados.</p>
+                <div class="social-links small">
+                    <a href="https://www.instagram.com/agencia_promodels_uy" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/luisprais/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
