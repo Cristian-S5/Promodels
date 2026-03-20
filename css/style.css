@@ -119,14 +119,21 @@ ul {
     align-items: center;
 }
 
-.logo-pro {
-    font-weight: 300;
-    color: var(--text-muted);
+.logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+    transition: var(--transition-normal);
 }
 
-.logo-models {
-    font-weight: 800;
-    color: var(--accent-gold);
+.logo:hover .logo-img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+    .logo-img {
+        height: 45px;
+    }
 }
 
 .nav-links {
