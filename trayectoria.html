@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trayectoria | Promodels</title>
+    <meta name="description" content="Nuestra trayectoria y marcas que confían en nosotros. Años de compromiso y resultados en el mercado uruguayo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <!-- Background Canvas for Atmospheric Effects -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-content">
+            <a href="index.html#home" class="logo">
+                <img src="./img/logo-promodels.png" alt="Promodels Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#nosotros" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="trayectoria.html" class="nav-link active">Trayectoria</a></li>
+                <li><a href="index.html#contacto" class="nav-link button-outline">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <button class="close-menu-btn" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <ul class="mobile-nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="index.html#nosotros">Quiénes Somos</a></li>
+                <li><a href="trayectoria.html">Trayectoria</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page Header -->
+        <section class="hero-small section-padding" style="padding-top: 150px; padding-bottom: 50px;">
+            <div class="container">
+                <div class="section-header center">
+                    <h1 class="section-title">Nuestra Trayectoria</h1>
+                    <p class="section-subtitle">Compromiso, innovación y resultados comprobables en Uruguay</p>
+                    <div class="title-line center-line"></div>
+                </div>
+            </div>
+            
+            <div class="background-glow-container">
+                <div class="abstract-shape shape-2"></div>
+                <div class="abstract-shape shape-3"></div>
+            </div>
+        </section>
+
+        <!-- Trayectoria Section -->
+        <section id="trayectoria" class="trajectory section-padding" style="padding-top: 20px;">
+            <div class="container">
+                <div class="timeline">
+                    <!-- Milestone 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Evento 1</h3>
+                            <p>Presencia destacada con staff profesional coordinado por Promodels.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Evento 2</h3>
+                            <p>Activación estratégica logrando objetivos de marca definidos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Evento 3</h3>
+                            <p>Gestión integral de staff y logística para lanzamiento de producto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-point"></div>
+                        <div class="timeline-content">
+                            <h3 class="milestone-title">Evento 4</h3>
+                            <p>Presencia nacional con promotores en los puntos más importantes del país.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Statistics -->
+                <div class="achievement-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Eventos Ejecutados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Promotores Formados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Marcas Aliadas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <div class="container" style="padding-bottom: 100px;">
+            <div class="hero-actions" style="justify-content: center;">
+                <a href="index.html#contacto" class="btn btn-primary">
+                    <span>Hablemos de tu Proyecto</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html#home" class="logo">
+                        <img src="./img/logo-promodels.png" alt="Promodels Logo" class="logo-img">
+                    </a>
+                    <p class="footer-desc">Soluciones reales de activación en retail, eventos y producciones de moda.</p>
+                </div>
+                
+                <div class="footer-links-group">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="index.html#nosotros">Quiénes Somos</a></li>
+                        <li><a href="trayectoria.html">Trayectoria</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone-alt"></i> +598 94 499 748</p>
+                    <p><i class="fas fa-envelope"></i> promodels@promodelsuruguay.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Promodels. Todos los derechos reservados.</p>
+                <div class="social-links small">
+                    <a href="https://www.instagram.com/agencia_promodels_uy" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/luisprais/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
