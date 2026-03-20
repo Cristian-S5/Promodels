@@ -120,7 +120,7 @@ ul {
 }
 
 .logo-img {
-    height: 108px;
+    height: 60px;
     width: auto;
     display: block;
     transition: var(--transition-normal);
@@ -132,7 +132,7 @@ ul {
 
 @media (max-width: 600px) {
     .logo-img {
-        height: 81px;
+        height: 45px;
     }
 }
 
