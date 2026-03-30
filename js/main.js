@@ -212,9 +212,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
         if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
         
-        // Auto-play every 2 seconds
+        // Auto-play every 5 seconds
         const startAutoPlay = () => {
-            autoPlayTimer = setInterval(nextSlide, 2000);
+            autoPlayTimer = setInterval(nextSlide, 5000);
         };
         
         const resetAutoPlay = () => {
@@ -227,6 +227,51 @@ document.addEventListener('DOMContentLoaded', () => {
         carousel.addEventListener('mouseleave', () => startAutoPlay());
         
         startAutoPlay();
+    });
+
+    // ---- Lightbox Logic ----
+    const lightboxOverlay = document.createElement('div');
+    lightboxOverlay.className = 'lightbox-overlay';
+    lightboxOverlay.innerHTML = `
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+            <img class="lightbox-img" src="" alt="Lightbox Image">
+        </div>
+    `;
+    document.body.appendChild(lightboxOverlay);
+
+    const lightboxImg = lightboxOverlay.querySelector('.lightbox-img');
+    const lightboxClose = lightboxOverlay.querySelector('.lightbox-close');
+
+    const openLightbox = (src) => {
+        lightboxImg.src = src;
+        lightboxOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+        lightboxOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => { lightboxImg.src = ''; }, 300);
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxOverlay.addEventListener('click', (e) => {
+        if (e.target === lightboxOverlay || e.target.classList.contains('lightbox-content')) {
+            closeLightbox();
+        }
+    });
+
+    // Handle escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) closeLightbox();
+    });
+
+    // Add click listeners to carousel images
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('carousel-slide')) {
+            openLightbox(e.target.src);
+        }
     });
 
     animate();
