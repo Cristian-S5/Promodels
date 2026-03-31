@@ -267,10 +267,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) closeLightbox();
     });
 
-    // Add click listeners to carousel images
+    // Add click listeners to lightbox triggers
     document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('carousel-slide')) {
-            openLightbox(e.target.src);
+        if (e.target.classList.contains('carousel-slide') || e.target.closest('.lightbox-trigger')) {
+            const target = e.target.tagName === 'IMG' ? e.target : e.target.querySelector('img');
+            if (target) openLightbox(target.src);
         }
     });
 
