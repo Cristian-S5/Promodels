@@ -129,11 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
-        // 1. Draw Golden Waves
+        // 1. Draw Blue Waves
         const waves = [
-            { amplitude: 40, frequency: 0.005, speed: 0.01, color: 'rgba(212, 175, 55, 0.15)' },
-            { amplitude: 60, frequency: 0.003, speed: 0.007, color: 'rgba(212, 175, 55, 0.1)' },
-            { amplitude: 30, frequency: 0.008, speed: 0.015, color: 'rgba(243, 229, 171, 0.08)' }
+            { amplitude: 40, frequency: 0.005, speed: 0.01, color: 'rgba(14, 50, 163, 0.15)' },
+            { amplitude: 60, frequency: 0.003, speed: 0.007, color: 'rgba(14, 50, 163, 0.1)' },
+            { amplitude: 30, frequency: 0.008, speed: 0.015, color: 'rgba(48, 117, 130, 0.08)' }
         ];
         
         waves.forEach((wave, index) => {
