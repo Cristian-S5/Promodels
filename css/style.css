@@ -291,19 +291,23 @@ ul {
     padding: 16px 32px;
     border-radius: 4px;
     cursor: pointer;
-    transition: var(--transition-normal);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     border: none;
     outline: none;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-costanero) 100%);
+    background: linear-gradient(135deg, var(--accent-indigo), var(--accent-costanero), var(--accent-indigo));
+    background-size: 200% auto;
+    background-position: left center;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--accent-costanero) 0%, var(--accent-indigo) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.6), 0 0 15px var(--accent-indigo-glow);
+    background-position: right center;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px var(--accent-indigo-glow);
 }
 
 .btn-secondary {
@@ -314,8 +318,8 @@ ul {
 
 .btn-secondary:hover {
     border-color: var(--accent-light);
-    background-color: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
 }
 
 /* Section Shared */
