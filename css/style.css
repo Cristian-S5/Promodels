@@ -11,7 +11,7 @@
     
     --accent-gold: #d4af37;
     --accent-gold-light: #f3e5ab;
-    --accent-gold-glow: rgba(212, 175, 55, 0.15);
+    --accent-gold-glow: rgba(212, 175, 55, 0.25);
     
     --accent-light: #f8f9fa;
     --accent-muted: #3f3f46;
@@ -83,7 +83,7 @@ ul {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.8;
     pointer-events: none;
 }
 
@@ -428,14 +428,14 @@ ul {
     position: absolute;
     border-radius: 50%;
     filter: blur(120px);
-    opacity: 0.7;
+    opacity: 0.85;
     will-change: transform;
 }
 
 .shape-1 {
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.4) 0%, transparent 80%);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.5) 0%, transparent 80%);
     top: -15%;
     right: -10%;
 }
@@ -443,7 +443,7 @@ ul {
 .shape-2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 80%);
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.45) 0%, transparent 80%);
     bottom: -5%;
     left: -10%;
     animation-delay: -5s;
@@ -452,7 +452,7 @@ ul {
 .shape-3 {
     width: 450px;
     height: 450px;
-    background: radial-gradient(circle, rgba(243, 229, 171, 0.25) 0%, transparent 80%);
+    background: radial-gradient(circle, rgba(243, 229, 171, 0.4) 0%, transparent 80%);
     top: 40%;
     left: 45%;
     animation-duration: 15s;

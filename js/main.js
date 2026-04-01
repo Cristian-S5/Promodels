@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 1. Draw Golden Waves
         const waves = [
-            { amplitude: 40, frequency: 0.005, speed: 0.01, color: 'rgba(212, 175, 55, 0.08)' },
-            { amplitude: 60, frequency: 0.003, speed: 0.007, color: 'rgba(212, 175, 55, 0.05)' },
-            { amplitude: 30, frequency: 0.008, speed: 0.015, color: 'rgba(243, 229, 171, 0.03)' }
+            { amplitude: 40, frequency: 0.005, speed: 0.01, color: 'rgba(212, 175, 55, 0.15)' },
+            { amplitude: 60, frequency: 0.003, speed: 0.007, color: 'rgba(212, 175, 55, 0.1)' },
+            { amplitude: 30, frequency: 0.008, speed: 0.015, color: 'rgba(243, 229, 171, 0.08)' }
         ];
         
         waves.forEach((wave, index) => {
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             shape.style.transform = `translate(${floatX}px, ${parallaxY + floatY}px)`;
             
             // Breathing / Pulsating intensity
-            const intensity = 0.6 + Math.sin(waveOffset * 0.01 + index) * 0.2;
+            const intensity = 0.8 + Math.sin(waveOffset * 0.01 + index) * 0.2;
             shape.style.opacity = intensity;
         });
         
