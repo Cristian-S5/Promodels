@@ -275,5 +275,92 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // ---- Custom Cursor Initialization ----
+    const initCustomCursor = () => {
+        const cursorContainer = document.createElement('div');
+        cursorContainer.className = 'cursor-container';
+        
+        // Dot of light structure
+        cursorContainer.innerHTML = `
+            <div class="custom-cursor-dot">
+                <div class="cursor-glint"></div>
+            </div>
+        `;
+        
+        const cursorTrail = document.createElement('div');
+        cursorTrail.className = 'cursor-trail';
+        
+        document.body.appendChild(cursorContainer);
+        document.body.appendChild(cursorTrail);
+        
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+        let trailX = 0, trailY = 0;
+        
+        // Show cursor when mouse moves
+        const onMouseMove = (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            if (!cursorContainer.classList.contains('active')) {
+                cursorContainer.classList.add('active');
+            }
+        };
+        
+        window.addEventListener('mousemove', onMouseMove);
+        
+        // Smooth animation loop for cursor and trail
+        const updateCursor = () => {
+            // Increased factors for better responsiveness
+            cursorX += (mouseX - cursorX) * 0.8;
+            cursorY += (mouseY - cursorY) * 0.8;
+            
+            trailX += (mouseX - trailX) * 0.15;
+            trailY += (mouseY - trailY) * 0.15;
+            
+            cursorContainer.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+            cursorTrail.style.transform = `translate(${trailX}px, ${trailY}px)`;
+            
+            requestAnimationFrame(updateCursor);
+        };
+        
+        updateCursor();
+        
+        // Handle Hover States
+        const clickables = 'a, button, .btn, .nav-link, .carousel-btn, .carousel-item-3d, input, select, textarea, [role="button"]';
+        
+        document.addEventListener('mouseover', (e) => {
+            if (e.target.closest(clickables)) {
+                cursorContainer.classList.add('hover');
+            }
+        });
+        
+        document.addEventListener('mouseout', (e) => {
+            if (e.target.closest(clickables)) {
+                cursorContainer.classList.remove('hover');
+            }
+        });
+
+        // Click Reaction
+        window.addEventListener('mousedown', () => cursorContainer.classList.add('clicked'));
+        window.addEventListener('mouseup', () => cursorContainer.classList.remove('clicked'));
+
+        // Hide cursor when it leaves the window
+        document.addEventListener('mouseleave', () => {
+            cursorContainer.classList.remove('active');
+            cursorTrail.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursorContainer.classList.add('active');
+            cursorTrail.style.opacity = '0.6';
+        });
+    };
+
+    // Only initialize on desktop/pointer devices
+    if (window.matchMedia('(pointer: fine)').matches) {
+        initCustomCursor();
+    }
+
     animate();
 });

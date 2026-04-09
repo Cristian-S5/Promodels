@@ -46,7 +46,13 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    cursor: none; /* Hide native cursor */
 }
+
+a, button, [onclick], .carousel-btn, .carousel-item-3d, .nav-link, .btn, select, input, textarea {
+    cursor: none !important; /* Force hide on clickables too */
+}
+
 
 /* Typography */
 h1, h2, h3, h4, .logo {
@@ -1665,3 +1671,85 @@ ul {
     100% { transform: translateY(-15px); }
 }
 
+/* Custom Cursor Styles - White Circle */
+.cursor-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.cursor-container.active {
+    display: block;
+}
+
+.custom-cursor-dot {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Flash Celeste on Hover */
+.cursor-container.hover .custom-cursor-dot {
+    transform: scale(3);
+    background: #e0faff; /* Lightest celeste */
+    box-shadow: 0 0 20px #87CEEB, 0 0 40px rgba(135, 206, 235, 0.4);
+    border-color: #87CEEB;
+}
+
+/* React to Click */
+.cursor-container.clicked .custom-cursor-dot {
+    transform: scale(0.8);
+    background: #87CEEB;
+    box-shadow: 0 0 30px #87CEEB;
+}
+
+.cursor-container.hover.clicked .custom-cursor-dot {
+    transform: scale(2);
+}
+
+/* Remove glint for this cleaner design */
+.cursor-glint {
+    display: none;
+}
+
+
+/* Secondary subtle trail */
+.cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-indigo);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
+    filter: blur(1px);
+    transform: translate(-50%, -50%);
+}
+
+.cursor-container.hover ~ .cursor-trail {
+    opacity: 0; /* Hide trail on hover to focus on the expanded dot */
+}
+
+
+@media (pointer: coarse) {
+    .cursor-container, .cursor-trail {
+        display: none !important;
+    }
+    body {
+        cursor: auto !important;
+    }
+}
