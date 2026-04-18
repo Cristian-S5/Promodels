@@ -986,34 +986,57 @@ ul {
 }
 
 /* Clientes */
-.clients-typographic-grid {
+.clients-logo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-.client-name {
-    padding: 40px 20px;
-    background: var(--bg-surface);
+.client-logo-item {
+    padding: 30px;
+    background: #000000; /* Pure black background */
     border: 1px solid var(--border-color);
-    text-align: center;
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 210px; /* 1.5x from 140px */
+    border-radius: 8px;
     transition: var(--transition-normal);
-    cursor: default;
+    position: relative;
+    overflow: hidden;
 }
 
-.client-name:hover {
-    color: var(--text-primary);
-    border-color: var(--border-hover);
-    background: rgba(255, 255, 255, 0.03);
-    transform: translateY(-3px);
+.client-logo-item img {
+    max-width: 90%; /* Slight increase in relative size too */
+    max-height: 85%;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: var(--transition-normal);
+}
+
+.client-logo-item:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--accent-indigo);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.client-logo-item:hover img {
+    opacity: 1; /* Full opacity on hover */
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .clients-logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    
+    .client-logo-item {
+        height: 180px;
+        padding: 20px;
+    }
 }
 
 /* Contacto */

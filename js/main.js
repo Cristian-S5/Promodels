@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ---- Intersection Observer for Reveal Animations ----
-    const revealElements = document.querySelectorAll('.service-card, .uniforms-highlight, .about-content-box, .info-item, .client-name, .timeline-item, .stat-card');
+    const revealElements = document.querySelectorAll('.service-card, .uniforms-highlight, .about-content-box, .info-item, .client-logo-item, .timeline-item, .stat-card');
     
     // Initial style setup for reveal
     revealElements.forEach(el => {
