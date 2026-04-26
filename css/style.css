@@ -1027,6 +1027,31 @@ ul {
     transform: scale(1.1);
 }
 
+.client-logo-item.logo-large {
+    padding: 10px;
+}
+
+.client-logo-item.logo-large img {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.client-logo-item.logo-large:hover img {
+    transform: scale(1.2);
+}
+
+.client-logo-item.logo-medium {
+    padding: 20px;
+}
+
+.client-logo-item.logo-medium img {
+    max-width: 95%;
+    max-height: 90%;
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .clients-logo-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
