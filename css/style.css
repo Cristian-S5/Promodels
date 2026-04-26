@@ -1393,6 +1393,24 @@ ul {
     .section-padding {
         padding: 60px 0;
     }
+
+    .clients-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .client-logo-item {
+        height: 140px;
+        padding: 15px;
+    }
+
+    .client-logo-item.logo-large {
+        padding: 5px;
+    }
+
+    .client-logo-item.logo-medium {
+        padding: 10px;
+    }
     
     .contact-form-container {
         padding: 24px;
