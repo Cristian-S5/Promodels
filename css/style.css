@@ -1157,6 +1157,29 @@ ul {
     border: 1px solid var(--border-color);
     padding: 40px;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-whatsapp {
+    background: #25D366 !important;
+    color: #fff !important;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E !important;
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.3);
+}
+
+.btn-email {
+    width: 100%;
 }
 
 .form-group {

@@ -55,33 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- Form Submission Prevent Default (Demo) ----
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<span>Enviando...</span> <i class="fas fa-spinner fa-spin"></i>';
-            btn.style.opacity = '0.7';
-            
-            // Simulate sending
-            setTimeout(() => {
-                btn.innerHTML = '<span>Mensaje Enviado</span> <i class="fas fa-check"></i>';
-                btn.style.backgroundColor = '#10b981';
-                btn.style.color = '#fff';
-                btn.style.opacity = '1';
-                contactForm.reset();
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                    btn.style.backgroundColor = '';
-                    btn.style.color = '';
-                }, 3000);
-            }, 1500);
-        });
-    }
+    // Contact form logic removed as per user request for direct contact buttons
 
     // ---- Intersection Observer for Reveal Animations ----
     const revealElements = document.querySelectorAll('.service-card, .uniforms-highlight, .about-content-box, .info-item, .client-logo-item, .stat-card');
